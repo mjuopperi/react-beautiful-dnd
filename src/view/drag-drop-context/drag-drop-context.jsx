@@ -18,6 +18,7 @@ type Props = {|
   // See our [sensor api](/docs/sensors/sensor-api.md)
   sensors?: Sensor[],
   enableDefaultSensors?: ?boolean,
+  autoScroll?: boolean,
 |};
 
 let instanceCount: number = 0;
@@ -49,6 +50,7 @@ export default function DragDropContext(props: Props) {
           onDragStart={props.onDragStart}
           onDragUpdate={props.onDragUpdate}
           onDragEnd={props.onDragEnd}
+          autoScroll={props.autoScroll}
         >
           {props.children}
         </App>
